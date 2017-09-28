@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="mha-test-es6">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `mha-test-es6`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class MhaTestEs6 extends Polymer.Element {
+      static get is() { return 'mha-test-es6'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'mha-test-es6'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MhaTestEs6.is, MhaTestEs6);
+  </script>
+</dom-module>
